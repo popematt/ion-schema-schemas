@@ -1,0 +1,85 @@
+$ion_schema_2_0
+
+type::{
+  name: constraint_names,
+  type: symbol,
+  valid_values: [
+    any_of,
+    all_of,
+    one_of,
+    not,
+    type,
+    annotations,
+    valid_values,
+    byte_length,
+    codepoint_length,
+    regex,
+    precision,
+    scale,
+    timestamp_offset,
+    timestamp_precision,
+    container_length,
+    contains,
+    element,
+    ordered_elements,
+    fields,
+    field_names,
+    utf8_byte_length,
+    ieee754_float,
+  ]
+}
+
+type::{
+  name: constraint_fields,
+  all_of: [
+    { id: 'constraints/any_of.isl', type: constraint_field },
+    { id: 'constraints/all_of.isl', type: constraint_field },
+    { id: 'constraints/one_of.isl', type: constraint_field },
+    { id: 'constraints/not.isl', type: constraint_field },
+    { id: 'constraints/type.isl', type: constraint_field },
+    { id: 'constraints/annotations.isl', type: constraint_field },
+    { id: 'constraints/valid_values.isl', type: constraint_field },
+    { id: 'constraints/byte_length.isl', type: constraint_field },
+    { id: 'constraints/codepoint_length.isl', type: constraint_field },
+    { id: 'constraints/regex.isl', type: constraint_field },
+    { id: 'constraints/precision.isl', type: constraint_field },
+    { id: 'constraints/scale.isl', type: constraint_field },
+    { id: 'constraints/timestamp_offset.isl', type: constraint_field },
+    { id: 'constraints/timestamp_precision.isl', type: constraint_field },
+    { id: 'constraints/container_length.isl', type: constraint_field },
+    { id: 'constraints/contains.isl', type: constraint_field },
+    { id: 'constraints/element.isl', type: constraint_field },
+    { id: 'constraints/ordered_elements.isl', type: constraint_field },
+    { id: 'constraints/fields.isl', type: constraint_field },
+    { id: 'constraints/field_names.isl', type: constraint_field },
+    { id: 'constraints/utf8_byte_length.isl', type: constraint_field },
+    { id: 'constraints/ieee754_float.isl', type: constraint_field },
+  ]
+}
+
+type::{
+  name: constraint_args,
+  fields: {
+    any_of: { occurs: optional, type: { id: 'constraints/any_of.isl', type: constraint_arg } },
+    all_of: { occurs: optional, type: { id: 'constraints/all_of.isl', type: constraint_arg } },
+    one_of: { occurs: optional, type: { id: 'constraints/one_of.isl', type: constraint_arg } },
+    not: { occurs: optional, type: { id: 'constraints/not.isl', type: constraint_arg } },
+    type: { occurs: optional, type: { id: 'constraints/type.isl', type: constraint_arg } },
+    annotations: { occurs: optional, type: { id: 'constraints/annotations.isl', type: constraint_arg } },
+    valid_values: { occurs: optional, type: { id: 'constraints/valid_values.isl', type: constraint_arg } },
+    byte_length: { occurs: optional, type: { id: 'constraints/byte_length.isl', type: constraint_arg } },
+    codepoint_length: { occurs: optional, type: { id: 'constraints/codepoint_length.isl', type: constraint_arg } },
+    regex: { occurs: optional, type: { id: 'constraints/regex.isl', type: constraint_arg } },
+    precision: { occurs: optional, type: { id: 'constraints/precision.isl', type: constraint_arg } },
+    scale: { occurs: optional, type: { id: 'constraints/scale.isl', type: constraint_arg } },
+    timestamp_offset: { occurs: optional, type: { id: 'constraints/timestamp_offset.isl', type: constraint_arg } },
+    timestamp_precision: { occurs: optional, type: { id: 'constraints/timestamp_precision.isl', type: constraint_arg } },
+    container_length: { occurs: optional, type: { id: 'constraints/container_length.isl', type: constraint_arg } },
+    element: { occurs: optional, type: { id: 'constraints/element.isl', type: constraint_arg } },
+    ordered_elements: { occurs: optional, type: { id: 'constraints/ordered_elements.isl', type: constraint_arg } },
+    fields: { occurs: optional, type: { id: 'constraints/fields.isl', type: constraint_arg } },
+    field_names: { occurs: optional, type: { id: 'constraints/field_names.isl', type: constraint_arg } },
+    utf8_byte_length: { occurs: optional, type: { id: 'constraints/utf8_byte_length.isl', type: constraint_arg } },
+    ieee754_float: { occurs: optional, type: { id: 'constraints/ieee754_float.isl', type: constraint_arg } },
+  }
+}
